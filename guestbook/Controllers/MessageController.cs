@@ -29,6 +29,7 @@ namespace guestbook.Controllers
         }
 
         [HttpGet]
+        [Route("Home/Index")]
         [Route("Message/Index")]
         public ActionResult Index()
         {
@@ -36,10 +37,5 @@ namespace guestbook.Controllers
             return View(MessageList);
         }
 
-        public ActionResult SingleMessage()
-        {
-            var message = new Message("Anon", "anon@gmail.com", "Yo dawg", DateTime.Now);
-            return View(message);
-        }
     }
 }

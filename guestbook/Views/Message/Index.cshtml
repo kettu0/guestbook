@@ -1,7 +1,7 @@
 ﻿@model List<guestbook.Models.Message>
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout1.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="message">
@@ -13,3 +13,14 @@
         <p>@message.CurrentDate</p>
     }
 </div>
+
+<div class="boxes">
+    <textarea placeholder="How did you enjoy your stay at the Inn?" id="message"></textarea><br>
+    <input type="text" placeholder="Your name, traveller" id="nickname"><br>
+    <p id="error-name"></p><br>
+    <input type="text" placeholder="Your e-mail..." id="e-mail"><br>
+    <p id="error-email"></p><br>
+    <input type="submit" value="Sign the book!" id="submit" disabled><br>
+</div>
+
+<script src="~/Scripts/script.js"></script>
