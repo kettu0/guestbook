@@ -2,12 +2,15 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background: url(images/rose2x.png) repeat;
+    width: 100%;
+    color: #6b6b6b;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    color: #6b6b6b;
 }
 
 }
@@ -26,17 +29,18 @@ textarea {
 }
 
 
-footer, .navbar-inverse, .container {
+.navbar-inverse, .container {
     background-color: #1a1919;
+
 }
 
 .container {
-    /*    opacity: 0.5;*/
     background: rgb(26, 25, 25);
     background: rgba(26, 25, 25, 0.5);
+    width: 57%;
 }
 
-.container .message footer {
+.container .message {
     opacity: 1;
 }
 

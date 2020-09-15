@@ -12,7 +12,6 @@ namespace guestbook.Controllers
         public static List<Message> MessageModels;
 
 
-
         public List<Message> GetMessageList()
         {
             var messageList = new List<Message>();
@@ -24,10 +23,7 @@ namespace guestbook.Controllers
             return messageList;
         }
 
-
-
         [HttpGet]
-        [Route("Home/Index")]
         [Route("Message/Index")]
         public ActionResult Index()
         {
@@ -42,6 +38,5 @@ namespace guestbook.Controllers
             MessageModels.Add(new Message(Nickname, eMail, UserMessage));
             return View(MessageModels);
         }
-
     }
 }

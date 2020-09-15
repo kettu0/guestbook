@@ -95,18 +95,15 @@ function enableButton() {
 
 
 function sendForm() {
+
     if (errorName.textContent.length === 0 && errorEmail.textContent.length === 0) {
         alert("The guestbook has been signed!");
-        location.reload();
     }
+    else 
+        return false;
 }
 
 
-document.addEventListener("input", enableButton);
 button.addEventListener("click", checkeMail);
 button.addEventListener("click", checkName);
-button.addEventListener("click", sendForm);
-
-
-
-
+document.addEventListener("input", enableButton);

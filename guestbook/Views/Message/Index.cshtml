@@ -14,13 +14,13 @@
     }
 </div>
 
-<form class="boxes" method="POST">
+<form class="boxes" method="POST" onsubmit="return sendForm()">
     <textarea placeholder="How did you enjoy your stay at the Inn?" id="userMessage" name="UserMessage"></textarea><br>
     <input type="text" placeholder="Your name, traveller" id="nickName" name="Nickname"><br>
     <p id="error-name"></p><br>
     <input type="text" placeholder="Your e-mail..." id="eMail" name="eMail"><br>
     <p id="error-email"></p><br>
-    <input type="submit" value="Sign the book!" id="submit" disabled><br>
+    <button type="submit" id="submit" disabled>Sign the book!</button><br>
 </form>
 
 <script src="~/Scripts/script.js"></script>
