@@ -24,3 +24,19 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+footer, .navbar-inverse, .container {
+    background-color: #1a1919;
+}
+
+.container {
+    /*    opacity: 0.5;*/
+    background: rgb(26, 25, 25);
+    background: rgba(26, 25, 25, 0.5);
+}
+
+.container .message footer {
+    opacity: 1;
+}
+

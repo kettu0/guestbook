@@ -1,4 +1,4 @@
-﻿const boxes = ["message", "nickname", "e-mail"];
+﻿const boxes = ["userMessage", "nickName", "eMail"];
 const button = document.getElementById("submit");
 let errorName = document.getElementById("error-name");
 let errorEmail = document.getElementById("error-email");
@@ -25,7 +25,7 @@ function checkAllBoxes(array) {
 
 
 function checkCapitals() {
-    let content = document.getElementById("nickname").value;
+    let content = document.getElementById("nickName").value;
     let contentArray = content.split(' ');
 
     for (const element of contentArray) {
@@ -38,7 +38,7 @@ function checkCapitals() {
 
 
 function checkName() {
-    const content = document.getElementById("nickname").value;
+    const content = document.getElementById("nickName").value;
     let errorMessage = "";
 
     if (!content.trim()) {
@@ -61,7 +61,7 @@ function checkName() {
 }
 
 function checkeMail() {
-    const content = document.getElementById("e-mail").value;
+    const content = document.getElementById("eMail").value;
     let errorMessage = "";
 
     if (!content.trim()) {

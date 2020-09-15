@@ -13,12 +13,12 @@ namespace guestbook.Models
 
         public DateTime CurrentDate { get; set; }
 
-        public Message(string nickname, string eMail, string userMessage, DateTime date)
+        public Message(string nickname, string eMail, string userMessage)
         {
             this.Nickname = nickname;
             this.eMail = eMail;
             this.UserMessage = userMessage;
-            this.CurrentDate = date;
+            this.CurrentDate = DateTime.Now;
 
         }
 

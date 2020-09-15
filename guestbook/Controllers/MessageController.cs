@@ -9,32 +9,38 @@ namespace guestbook.Controllers
 {
     public class MessageController : Controller
     {
-        public List<Message> MessageModels { get; set; }
+        public static List<Message> MessageModels;
 
-        public MessageController()
-        {
-            MessageModels = new List<Message>();
-        }
+
 
         public List<Message> GetMessageList()
         {
-            List<Message> MessageList = new List<Message>();
+            var messageList = new List<Message>();
+            messageList.Add(new Message("Geralt of Rivia", "geraltthewitcher@kaermohren.nov", "Message 1"));
+            messageList.Add(new Message("Rowan", "thebraveadventurer@honeywood.au", "Message 2"));
+            messageList.Add(new Message("Albus Dumbledore", "albuspercival@hogwarts.uk", "Message 3"));
+            messageList.Add(new Message("Tyrion Lannister", "theImp@casterlyrock.west", "Message 4"));
 
-            MessageList.Add(new Message("Geralt of Rivia", "geraltthewitcher@kaermohren.nov", "Message 1", DateTime.Now));
-            MessageList.Add(new Message("Rowan", "thebraveadventurer@honeywood.au", "Message 2", DateTime.Now));
-            MessageList.Add(new Message("Albus Dumbledore", "albuspercival@hogwarts.uk", "Message 3", DateTime.Now));
-            MessageList.Add(new Message("Tyrion Lannister", "theImp@casterlyrock.west", "Message 4", DateTime.Now));
-
-            return MessageList;
+            return messageList;
         }
+
+
 
         [HttpGet]
         [Route("Home/Index")]
         [Route("Message/Index")]
         public ActionResult Index()
         {
-            List<Message> MessageList = GetMessageList();
-            return View(MessageList);
+            MessageModels = GetMessageList();
+            return View(MessageModels);
+        }
+
+        [HttpPost]
+        [Route("Message/Index")]
+        public ActionResult Index(string Nickname, string eMail, string UserMessage)
+        {
+            MessageModels.Add(new Message(Nickname, eMail, UserMessage));
+            return View(MessageModels);
         }
 
     }
