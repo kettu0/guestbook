@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign the guestbook of the Inn at the Crossroads!</title>
+    <link rel="icon" type="image/x-icon" href="~/Content/images/favicon.png">
     @Styles.Render("~/Content/css")
     @*@Scripts.Render("~/bundles/modernizr")*@
 </head>
@@ -22,15 +23,23 @@
         </div>
     </div>
 
-        <div class="container body-content">
+    <div class="container body-content">
+        <div class="images">
             <img src="~/Content/images/tavern.jpg" id="tavern" />
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - Inn at the Crossroads</p>
-            </footer>
+            <img src="~/Content/images/inn.png" id="inn" />
+            <img src="~/Content/images/guest.png" id="guest" />
         </div>
-
+        <div class="main-section">
+            @RenderBody()
+            <div class="bottom">
+                <hr />
+                <footer>
+                    <p><strong>&copy; @DateTime.Now.Year - Inn at the Crossroads</strong></p>
+                </footer>
+                <hr />
+            </div>
+        </div>
+    </div>
     @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)*@

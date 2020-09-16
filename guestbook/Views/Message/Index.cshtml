@@ -4,23 +4,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="message">
-    @foreach (var message in Model)
-    {
-        <p>@message.Nickname</p>
-        <p>@message.UserMessage</p>
-        <p>@message.eMail</p>
-        <p>@message.CurrentDate</p>
-    }
-</div>
+<h2>Would you like to leave a trace, traveller?</h2>
 
 <form class="boxes" method="POST" onsubmit="return sendForm()">
     <textarea placeholder="How did you enjoy your stay at the Inn?" id="userMessage" name="UserMessage"></textarea><br>
-    <input type="text" placeholder="Your name, traveller" id="nickName" name="Nickname"><br>
-    <p id="error-name"></p><br>
-    <input type="text" placeholder="Your e-mail..." id="eMail" name="eMail"><br>
-    <p id="error-email"></p><br>
-    <button type="submit" id="submit" disabled>Sign the book!</button><br>
+    <input type="text" placeholder="Your name, traveller" id="nickName" name="Nickname">
+    <p id="error-name"></p>
+    <input type="text" placeholder="Your e-mail..." id="eMail" name="eMail">
+    <p id="error-email"></p>
+    <button type="submit" id="submit" disabled>Sign the book!</button>
 </form>
+<hr />
 
-<script src="~/Scripts/script.js"></script>
+<h2>See what others think...</h2>
+
+@foreach (var message in Model)
+{
+    <div class="message">
+        <p><strong>Name: </strong>@message.Nickname <br />
+        <strong>E-mail: </strong><a href="mailto:@message.eMail"> @message.eMail</a></p>
+        <p>@message.UserMessage</p>
+        <p id="date"><strong>@message.CurrentDate</strong></p>
+    </div>
+}
+  
+    <script src="~/Scripts/script.js"></script>

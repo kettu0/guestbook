@@ -4,6 +4,8 @@
     background: url(images/rose2x.png) repeat;
     width: 100%;
     color: #6b6b6b;
+    font-size: 20px;
+    font-family: Bookman, URW Bookman L, serif;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -13,7 +15,7 @@
     color: #6b6b6b;
 }
 
-}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -25,11 +27,25 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    width: 80%;
+    max-width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: #a3a3a3;
+}
+
+.navbar-brand {
+    font-family: Luminari, fantasy;
+    font-size: 1.6em;
+
 }
 
 
-.navbar-inverse, .container {
+a:hover, .navbar-brand:hover {
+    color: #1a1919;
+}
+
+.navbar-inverse, .container, footer {
     background-color: #1a1919;
 
 }
@@ -38,9 +54,134 @@ textarea {
     background: rgb(26, 25, 25);
     background: rgba(26, 25, 25, 0.5);
     width: 57%;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .container .message {
     opacity: 1;
+
 }
 
+#tavern {
+    width:100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+}
+
+#inn {
+    width: 50%;
+    height: auto;
+    top: 20%;
+    left: 25.5%;
+    position: absolute;
+}
+
+#guest {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    top: 33%;
+    left: 40%;
+    position: absolute;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    border: 30px;
+    font-size: 1.2em;
+}
+
+.bottom {
+    background-color: #1a1919;
+    padding: 0;
+    margin: 0;
+    position: inherit;
+}
+
+ .boxes, p, h2 {
+    padding: 20px;
+}
+
+.boxes {
+    text-align: center;
+
+
+}
+
+h2 {
+    color: #a3a3a3;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    font-size: 2em;
+}
+
+#submit {
+    font-size: 1.5em;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #1a1919;
+    color: #a3a3a3;
+}
+
+#submit:hover{
+    opacity: 0.5;
+}
+
+
+hr {
+    opacity: 0.5;
+    border-radius: 5px;
+    border: 2px groove #6b6b6b;
+}
+
+.message {
+    background-color: #1a1919;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+a, a:visited {
+    color: #a3a3a3;
+}
+
+    a:hover {
+        color: #6b6b6b;
+        text-decoration: none;
+    }
+
+
+#date {
+    font-size: 0.8em;
+
+}
+
+#main-button {
+    font-size: 1.5em;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #1a1919;
+    color: #a3a3a3;
+    top: 40px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 100px;
+}
+
+#main-button:hover {
+    opacity: 0.5;
+
+}
+
+#button-link {
+
+    padding-left: 25%;
+}

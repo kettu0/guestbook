@@ -15,11 +15,11 @@ namespace guestbook.Controllers
         public List<Message> GetMessageList()
         {
             var messageList = new List<Message>();
-            messageList.Add(new Message("Geralt of Rivia", "geraltthewitcher@kaermohren.nov", "Message 1"));
-            messageList.Add(new Message("Rowan", "thebraveadventurer@honeywood.au", "Message 2"));
-            messageList.Add(new Message("Albus Dumbledore", "albuspercival@hogwarts.uk", "Message 3"));
-            messageList.Add(new Message("Tyrion Lannister", "theImp@casterlyrock.west", "Message 4"));
-
+            messageList.Add(new Message("Geralt of Rivia", "geraltthewitcher@kaermohren.nov", "The best Dwarven spirit I've ever drunk. And trust me, I have some experience."));
+            messageList.Add(new Message("Rowan", "thebraveadventurer@honeywood.au", "Great adventures await you here. But watch out for dead-eyed NPCs."));
+            messageList.Add(new Message("Tyrion Lannister", "theImp@casterlyrock.west", "I drink and know things... especially here."));
+            messageList.Add(new Message("Albus Dumbledore", "albuspercival@hogwarts.uk", "Best pumpkin cakes and firewhiskey... outside Hogwarts, of course."));
+            messageList.Add(new Message("Legolas", "legolas@middle.earth", "I've taken the Hobbits here."));
             return messageList;
         }
 
